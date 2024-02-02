@@ -9,7 +9,7 @@ To run a frequency-response calculation we use similar workflow to \ref doc_thin
 
 With the two input files defined we can use `thincurr_fr` to run a frequency-response calculation.
 
-    /path/to/OFT/bin/thincurr_fr oft.in oft_in.xml
+    /path/to/OFT/build_release/bin/thincurr_fr oft.in oft_in.xml
 
 Contents of the input files are provided below and in the examples directory under `ThinCurr/torus`, along with the necessary mesh file `thincurr_ex-torus.h5`.
 
@@ -58,7 +58,7 @@ ToDo: Describe current potential "holes" and "singularities"
 
 Once complete you can now generate XDMF files suitable for visualization of results using the [VisIt](https://visit-dav.github.io/visit-website/index.html) code. For frequency-response calculations we do not need to do a separate plotting run, so once complete, you just need to run the `build_xdmf.py` script, which generates XDMF metadata files that tells VisIt how to read the data. This can be done using the following command
 
-    python /path/to/oft/bin/build_xdmf.py
+    python /path/to/oft/src/utilities/build_xdmf.py
 
 Next use VisIt to open the `surf_static.xmf` file, which will contain two vector fields `JRe` and `JIm` that correspond to the current distributions for the real and imaginary components of the solution in the frequency-domain. If you are running this example remotely and using VisIt locally you will need to copy the `mesh.*.h5`, `scalar_dump.*.h5`, `vector_dump.*.h5`, and `*.xmf` files to your local computer for visualization. The real component `JRe` should look like the figure below.
 
