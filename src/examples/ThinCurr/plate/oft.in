@@ -1,5 +1,5 @@
 &runtime_options
- debug=0
+ debug=0	! Verbosity of debug information (0-3)
 /
 
 &mesh_options
@@ -7,11 +7,11 @@
 /
 
 &native_mesh_options
- filename="thincurr_ex-plate.h5"
+ filename="thincurr_ex-plate.h5"	! Name of file containing mesh
 /
 
 &thincurr_eig_options
- direct=T
- plot_run=F
- neigs=4
+ direct=T	! Use direct solver? (iterative method is faster for only a few modes)
+ plot_run=F	! Perform a plotting run? (creates VisIt files from prior run)
+ neigs=4	! Number of eigenvalues/vectors to compute (longest decay times)
 /
