@@ -15,7 +15,7 @@ Current waveforms are defined in the file specified by `curr_file` in the `thinc
 
 With these files we can use `thincurr_td` to run a time-dependent simulation. Note, make sure "plot_run=F" in the "thincurr_td_options" group.
 
-    /path/to/OFT/bin/thincurr_td oft.in oft_in.xml
+    /path/to/OFT/build_release/bin/thincurr_td oft.in oft_in.xml
 
 Contents of the input files are provided below and in the examples directory under `ThinCurr/cyl`, along with the necessary mesh file `thincurr_ex-cyl.h5`.
 
@@ -78,7 +78,7 @@ ToDo: Describe current potential "holes"
 
 Once complete you can now generate VisIt files to visualize the solution as above. First, rerun the code as above but with "plot_run=T" in the `thincurr_td_options` group. Once complete, you need to run the `build_xdmf.py` script, which generates XDMF metadata files that tells VisIt how to read the data. This can be done using the following command
 
-    python /path/to/oft/bin/build_xdmf.py
+    python /path/to/oft/src/utilities/build_xdmf.py
 
 Next use VisIt to open the `surf_out_XXXX.xmf` database, which will contain a series timepoints with the vector field `J`. If you are running this example remotely and using VisIt locally you will need to copy the `mesh.*.h5`, `scalar_dump.*.h5`, `vector_dump.*.h5`, and `*.xmf` files to your local computer for visualization. The solution `J` at the first time point should look like the figure below.
 
