@@ -29,7 +29,6 @@ During the run you will see it report a bunch of general information and then it
  filename="thincurr_ex-plate.h5"	! Name of file containing mesh
 /
 
-\verbatim
 &thincurr_eig_options
  direct=T	! Use direct solver? (iterative method is faster for only a few modes)
  plot_run=F	! Perform a plotting run? (creates VisIt files from prior run)
