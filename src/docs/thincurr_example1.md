@@ -1,4 +1,4 @@
-ThinCurr Example 1: Eigenstates of a square plate {#doc_thincurr_ex1}
+ThinCurr Example 1: Eigenstates of a square plate {#doc_thincurr_ex1}A
 ==============
 
 [TOC]
@@ -18,7 +18,7 @@ During the run you will see it report a bunch of general information and then it
 **General global settings** (`oft.in`)
 \verbatim
 &runtime_options
- debug=0
+ debug=0	! Verbosity of debug information (0-3)
 /
 
 &mesh_options
@@ -26,14 +26,14 @@ During the run you will see it report a bunch of general information and then it
 /
 
 &native_mesh_options
- filename="thincurr_ex-plate.h5"
+ filename="thincurr_ex-plate.h5"	! Name of file containing mesh
 /
 
 \verbatim
 &thincurr_eig_options
- direct=T
- plot_run=F
- neigs=4
+ direct=T	! Use direct solver? (iterative method is faster for only a few modes)
+ plot_run=F	! Perform a plotting run? (creates VisIt files from prior run)
+ neigs=4	! Number of eigenvalues/vectors to compute (longest decay times)
 /
 \endverbatim
 
