@@ -27,7 +27,7 @@ ToDo: Describe current potential "holes"
 **General global settings** (`oft.in`)
 \verbatim
 &runtime_options
- debug=0
+ debug=0	! Verbosity of debug information (0-3)
 /
 
 &mesh_options
@@ -35,18 +35,18 @@ ToDo: Describe current potential "holes"
 /
 
 &native_mesh_options
- filename="thincurr_ex-cyl.h5"
+ filename="thincurr_ex-cyl.h5"	! Name of file containing mesh
 /
 
 &thincurr_td_options
- curr_file='curr.drive'
- dt=2.e-5
- nsteps=200
- nplot=10
- direct=T
- save_L=F
- save_Mcoil=F
- plot_run=F
+ curr_file='curr.drive'		! File containing coil current waveforms
+ dt=2.e-5			! Timestep used in simulation
+ nsteps=200			! Number of steps to take
+ nplot=10			! Frequency for saving plotting/restart files
+ direct=T			! Use direct solver?
+ save_L=F			! Save inductance matrix for reuse?
+ save_Mcoil=F			! Save mutual matrix to driver coils?
+ plot_run=F			! Perform a plotting run? (creates VisIt files from prior run)
 /
 \endverbatim
 
