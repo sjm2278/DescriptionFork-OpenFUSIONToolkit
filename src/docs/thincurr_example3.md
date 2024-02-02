@@ -21,7 +21,7 @@ ToDo: Describe current potential "holes" and "singularities"
 **General global settings** (`oft.in`)
 \verbatim
 &runtime_options
- debug=0
+ debug=0	! Verbosity of debug information (0-3)
 /
 
 &mesh_options
@@ -29,13 +29,13 @@ ToDo: Describe current potential "holes" and "singularities"
 /
 
 &native_mesh_options
- filename="thincurr_ex-torus.h5"
+ filename="thincurr_ex-torus.h5"	! Name of file containing mesh
 /
 
 &thincurr_fr_options
- direct=T
- freq=5.E3
- fr_limit=0
+ direct=T	! Use direct solver?
+ freq=5.E3	! Frequency used for FR run
+ fr_limit=0	! Limt for FR run (0 -> Use "freq", 1 -> Inductive limit, 2-> Resistive limit)
 /
 \endverbatim
 
